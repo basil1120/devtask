@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "1e9002f2-e37e-4fcd-9e97-ea52371b6297",
+		"name": "KCB-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:50000/api/v1/fundstransfer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"header\": {\r\n        \"messageID\": \"12345666\",\r\n        \"featureCode\": \"201\",\r\n        \"featureName\": \"FinancialTransactions\",\r\n        \"serviceCode\": \"2001\",\r\n        \"serviceName\": \"FundsTransfer\",\r\n        \"serviceSubCategory\":\"Account\",\r\n        \"minorServiceVersion\": \"1.0\",\r\n        \"channelCode\": \"01\",\r\n        \"channelName\": \"atm\",\r\n        \"routeCode\": \"01\",  \r\n        \"timeStamp\": \"22222\",\r\n        \"serviceMode\": \"sync\",  \r\n        \"subscribeEvents\": \"1\",\r\n        \"callBackURL\": \"\"  \r\n    },\r\n   \"requestPayload\": {\r\n         \"transactionInfo\": {\r\n         \"companyCode\": \"KE0010001\",\r\n         \"transactionType\": \"Payment Notification\",\r\n         \"creditAccountNumber\": \"123456789\",\r\n         \"credintMobileNumber\":\"0718908314\",\r\n         \"transactionAmount\": \"1\",\r\n         \"transactionReference\": \"12345666\",\r\n         \"currencyCode\": \"KES\",\r\n         \"amountCurrency\": \"KES\",\r\n         \"dateTime\": \"2020-11-12 00:00:00\",\r\n         \"dateString\": \"2020-11-12 00:00:00\"\r\n      }\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:50000/api/v1/fundstransfer",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"api",
+						"v1",
+						"fundstransfer"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
